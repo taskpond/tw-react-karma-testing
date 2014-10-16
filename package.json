@@ -1,14 +1,14 @@
 {
-  "name": "react-test",
+  "name": "tw-react-karma-testing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo setup of React, Browserify (Watchify) and Karma working together.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify js/index.js -o build/test-bundle-BUILD.js; mv build/test-bundle-BUILD.js build/test-bundle.js",
-    "watch": "watchify js/index.js -o build/test-bundle.js -v"
+    "build": "node node_modules/browserify/bin/cmd.js js/index.js -o build/test-bundle-BUILD.js; mv build/test-bundle-BUILD.js build/test-bundle.js",
+    "watch": "node node_modules/watchify/bin/cmd.js js/index.js -o build/test-bundle.js -v",
+    "karma": "node node_modules/karma/bin/karma start"
   },
-  "author": "",
+  "author": "Anri Digholm",
   "license": "ISC",
   "browser": {
     "jquery": "./bower_components/jquery/dist/jquery.min.js"
@@ -22,13 +22,15 @@
     ]
   },
   "dependencies": {
-    "browserify": "^6.1.0",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "react": "^0.11.2"
   },
   "devDependencies": {
+    "browserify": "^6.1.0",
     "browserify-shim": "^3.8.0",
     "karma": "^0.12.24",
     "karma-chrome-launcher": "^0.1.5",
-    "karma-jasmine": "^0.1.5"
+    "karma-jasmine": "^0.1.5",
+    "watchify": "^2.0.0"
   }
 }

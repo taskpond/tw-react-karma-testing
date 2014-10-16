@@ -49,7 +49,7 @@ describe('A simple React component', function() {
     // Same for div.base ..
     var base = TestUtils.findRenderedDOMComponentWithClass(TestComp, 'base');
     expect(base.getDOMNode().textContent).toMatch(/second/);
-    expect(base.getDOMNode().textContent).toMatch(/inner span/);
+    expect(base.getDOMNode().textContent).toMatch(/inner/);
 
   });
 });
